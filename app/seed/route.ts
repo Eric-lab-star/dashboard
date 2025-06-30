@@ -118,9 +118,6 @@ export async function GET() {
       // seedRevenue(),
     ]);
 
-	await dropTables();
-	
-
     return Response.json({ message: 'Database seeded successfully' });
   } catch (error) {
     return Response.json({ error }, { status: 500 });
