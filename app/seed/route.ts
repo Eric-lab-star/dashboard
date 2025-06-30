@@ -111,22 +111,12 @@ async function dropTables() {
 
 export async function GET() {
   try {
-
-	await sql`
-	  DROP TABLE invoices;
-	`;	
-	await sql`
-	  DROP TABLE customers;
-	`;	
-	await sql`
-	  DROP TABLE revenue;
-	`;	
-    // const result = await sql.begin((sql) => [
-    //   seedUsers(),
-    //   seedCustomers(),
-    //   seedInvoices(),
-    //   seedRevenue(),
-    // ]);
+    const result = await sql.begin((sql) => [
+      seedUsers(),
+      // seedCustomers(),
+      // seedInvoices(),
+      // seedRevenue(),
+    ]);
 
 	await dropTables();
 	
