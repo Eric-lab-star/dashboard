@@ -103,7 +103,9 @@ async function seedRevenue() {
 
 async function dropTables() {
 	await sql`
-	  DROP TABLE users;
+	  DROP TABLE revenue;
+	  DROP TABLE customers;
+	  DROP TABLE invoices;
 	`;	
 }
 
